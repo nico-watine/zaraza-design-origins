@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/lavalamp_full.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+<!-- lavaLamp full action script -->
+<script type="text/javascript">
+$(function() {
+    $.easing.easeOutBack = function (x, t, b, c, d, s) {
+        if (s === undefined) s = 1.70158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    };
+
+    $('.lavalamp-full').lavalamp({
+        blur: function() {
+            $(this).addClass('blur');
+        },
+        focus: function() {
+            $(this).removeClass('blur');
+        },
+        animation: Modernizr.testAllProps('transition') ? 0 : {duration: 2000, easing: 'easeOutBack'}
+    });
+});
+</script>
+<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancyBox/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen" />
+    
+    <!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css" />
+	<script type="text/javascript" src="fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    
+<style type="text/css">
+		
+		.fancybox-nav span {
+				visibility:visible;
+		}		
+		</style>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Zaraza Design | Contact</title>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "d32f9e85-41b9-4d78-8386-9361fbce08f8", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+<script>
+// other links of reference
+// http://forums.sharethis.com/topic.php?id=3279
+// http://forums.sharethis.com/topic.php?id=78490
+// http://support.sharethis.com/customer/portal/articles/475079-share-properties-and-sharing-custom-information
+
+function buildShareThis(url){
+ var customShareThis  = "<div class='share'>"; // class for styling maybe
+     customShareThis += "<span class='st_facebook_hcount' displayText='Facebook' st_url='"+url+"'></span> ";
+     customShareThis += "<span class='st_twitter_hcount' displayText='Tweet' st_url='"+url+"'></span>";
+     customShareThis += "<span class='st_pinterest_hcount' displayText='Pinterest' st_url='"+url+"' st_img='"+url+"' ></span>";
+     customShareThis += "</div>";
+     return customShareThis;
+}
+
+$(document).ready(function() {
+ $(".fancybox").fancybox({
+   closeClick  : false,
+   nextEffect: 'fade',
+   prevEffect: 'fade',
+   beforeShow: function() {
+     var caption =  $(this.element).data("caption") ? $(this.element).data("caption") : "";
+     this.title = this.title ? this.title + buildShareThis(this.href) + caption : buildShareThis(this.href) + caption;
+  },
+  afterShow: function(){
+     stButtons.locateElements();
+  },
+  helpers : {
+    overlay: {closeClick: false},
+    title: {type: 'inside'}
+  }
+ }); // fancybox
+}); // ready
+</script>
+</head>
+
+<body>
+    <div class="main_skeleton">
+    
+    	<div class="home_background">
+        <img src="Images/background-home.jpg" />
+        <div style="position: absolute; top: 25px; left:25px;">
+        <img src="Photos/Contact/profile pic.jpg" />
+        </div>
+        <div style="position: absolute; top: 430px; left: 25px;">
+        <a class="fancybox" title=" A Zaraza Design bedroom" data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Contact/contact.jpg"><img src="Photos/Contact/contact-square.jpg" /></a>
+        </div>
+        <div class="contact_header">
+      <h1 style="font-size:90px; font-weight:normal;">
+      contact
+      </h1>
+      </div>
+        <div style="position:absolute; top: 175px; left: 230px; width: 575px; height: 100px; background-image:url(Images/background-menu.png); background-repeat:repeat; ">
+        <h1 style="font-weight:normal; font-size: 60px; top: -10px; left: 10px; position: relative;">
+        Zaraza Design, LLC
+        </h1>
+        </div>
+        <div style="position:absolute; top: 275px; left: 230px; width: 575px; height: 250px; background-color: white;">
+        <p style="font-size: 30px; position: relative; top: -20px; left: 10px; line-height: 40px;">
+        Juliana Zaraza
+        <br />
+        988 Patterson Street<br />
+		Houston, Texas 77007<br />
+        P: 281-250-0244<br />
+        F: 713-589-7962<br />
+        Email:  Juliana@zarazadesign.com
+
+        </p>
+        </div>
+        
+        
+        </div>
+            <div class="logo">
+            </div>
+                <div class="bottom_menubar">
+                    <ul class="lavalamp-full">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                      <li class="current"><a href="#">Contact</a></li>
+                    </ul>
+                </div>    
+</div>      
+    
+</body>
+</html>

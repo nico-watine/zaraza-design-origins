@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body
+{
+	
+	background: rgba(136,169,199,1);
+	background-repeat:repeat;
+	font-family: walkway, Sans-Serif;
+}
+
+.main_skeleton
+{
+	position: absolute;
+	height: 660px;
+	left: 50%;
+	top: 0;
+	width: 880px;
+	margin-left: -440px;
+	background-color: #99ffff;
+	z-index: 1;
+}
+
+.main_skeleton_gallery
+{
+	position: absolute;
+	height: 660px;
+	left: 50%;
+	top: 0;
+	width: 880px;
+	margin-left: -440px;
+	background-color: white;
+	z-index: 1;
+}
+
+.bottom_menubar
+{
+	width: 880px;
+	height: 60px;
+	background-color: white;
+	opacity: 1;
+	position:absolute;
+	top: 660px;
+	z-index:99;
+	
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	-moz-border-bottom-right-radius: 20px;
+	-moz-border-bottom-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -khtml-border-bottom-right-radius: 20px;
+    -khtml-border-bottom-left-radius: 20px;
+}
+
+.logo
+{
+	position:absolute;
+	top: 620px;
+	background-image: url(../Images/zarazalogo.png);
+	width: 442px;
+	height: 137px;
+	z-index: 999;
+}
+
+.home_background
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	z-index:2;
+}
+
+.hover_text
+{
+	position:absolute;
+	top: 300px;
+	left: 100px;
+	width: 420px;
+	height: 200px;
+	background-color: white;
+	opacity: .8;
+	padding: 10px;
+}
+
+.hover_text_gallery
+{
+	position:absolute;
+	top: 80px;
+	left: 100px;
+	width: 200px;
+	height: 40px;
+	background-color: white;
+	opacity: .8;
+	padding: 10px;
+	z-index: 20;
+}
+
+.slideshow
+{
+	width:880px;
+	height: 315px;
+	position:absolute;
+	top: 20px;
+	left: 0px;
+	z-index:3;
+	border-top: 4px solid white;
+	border-bottom: 4px solid white;
+}
+
+.home_text
+{
+	width: 670px;
+	height: 170px;
+	background-color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:-335px;
+	margin-top: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 30px;
+	text-align:center;
+	z-index: 3;
+	border: none;
+	
+	
+	
+
+}
+
+
+@font-face{ 
+	font-family: 'walkway';
+	src: url('../Font/Walkway_Bold.eot');
+	src: url('../Font/Walkway_Bold.eot?#iefix') format('embedded-opentype'),
+	     url('../Font/Walkway_Bold.woff') format('woff'),
+	     url('../Font/Walkway_Bold.ttf') format('truetype'),
+	     url('WebFont.svg#webfont') format('svg');
+}
+
+div#preload { display: none; }
+
+.services_image
+{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	width: 413px;
+	height:550px;
+	border-top: 3px solid white;
+	border-right:3px solid white;
+}
+
+.services_header
+{
+	position:absolute;
+	top: -15px;
+	left:15px;
+	width: 413px;
+	height: 50px;
+	text-align:left;
+	line-height: 1px;
+}
+
+.contact_header
+{
+	position:absolute;
+	top: 65px;
+	left:230px;
+	width: 413px;
+	height: 50px;
+	text-align:left;
+	line-height: 1px;
+}
+.services_content-1
+{
+	
+	position:absolute;
+	top:60px;
+	left:10px;
+	font-size: 23px;
+	padding: 10px;
+	width: 820px;
+	line-height: 22px;
+	letter-spacing: 1px;
+}
+
+.thumb-1
+{
+	position:absolute;
+	top: 500px;
+	left: 130px;
+	border: 2px solid white;
+}
+
+.thumb-2
+{
+	position:absolute;
+	top: 500px;
+	left: 300px;
+	border: 2px solid white;
+}
+
+.thumb-3
+{
+	position:absolute;
+	top: 500px;
+	left: 470px;
+	border: 2px solid white;
+}
+
+.thumb-4
+{
+	position:absolute;
+	top: 500px;
+	left: 640px;
+	border: 2px solid white;
+}

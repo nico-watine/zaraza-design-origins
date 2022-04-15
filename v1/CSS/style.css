@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body
+{
+	background-color: #666666;
+}
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_skeleton
+{
+	position: absolute;
+	height: 660px;
+	left: 50%;
+	top: 50%;
+	width: 880px;
+	margin: -410px 0 0 -440px;
+	background-color: #99ffff;
+	z-index: 1;
+}
+
+.main_skeleton_gallery
+{
+	position: absolute;
+	height: 660px;
+	left: 50%;
+	top: 50%;
+	width: 880px;
+	margin: -410px 0 0 -440px;
+	background-color: white;
+	z-index: 1;
+}
+.bottom_menubar
+{
+	width: 880px;
+	height: 60px;
+	background-color: #99ffff;
+	opacity: 1;
+	position:absolute;
+	top: 660px;
+	z-index:99;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.logo
+{
+	position:absolute;
+	top: 620px;
+	background-image: url(../Images/zarazalogo.png);
+	width: 442px;
+	height: 137px;
+	z-index: 999;
+}
+
+.home_background
+{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	z-index:0;
+}
+
+.hover_text
+{
+	position:absolute;
+	top: 80px;
+	left: 100px;
+	width: 420px;
+	height: 200px;
+	background-color: white;
+	opacity: .8;
+	padding: 10px;
+}
+
+.hover_text_gallery
+{
+	position:absolute;
+	top: 80px;
+	left: 100px;
+	width: 200px;
+	height: 40px;
+	background-color: white;
+	opacity: .8;
+	padding: 10px;
+	z-index: 20;
+}
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/lavalamp_full.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<!-- lavaLamp full action script -->
+<script type="text/javascript">
+$(function() {
+    $.easing.easeOutBack = function (x, t, b, c, d, s) {
+        if (s === undefined) s = 1.70158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    };
+
+    $('.lavalamp-full').lavalamp({
+        blur: function() {
+            $(this).addClass('blur');
+        },
+        focus: function() {
+            $(this).removeClass('blur');
+        },
+        animation: Modernizr.testAllProps('transition') ? 0 : {duration: 2000, easing: 'easeOutBack'}
+    });
+});
+</script>
+<!-- slideshow script -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Zaraza Design | Welcome</title>
+</head>
+
+<body>
+    <div class="main_skeleton">
+    	<div class="home_background">
+        <img src="Images/background-home.jpg" />
+    	<div class="slideshow">
+        <img src="Photos/Home Slideshow/slide-1.jpg" style="width:880px; height:315px;"/>
+        <img src="Photos/Home Slideshow/slide-2.jpg" style="width:880px; height:315px;"/>
+        <img src="Photos/Home Slideshow/slide-3.jpg" style="width:880px; height:315px;"/>
+        <img src="Photos/Home Slideshow/slide-4.jpg" style="width:880px; height:315px;"/>
+        </div>
+        <div class="home_text">
+        <h1 style="font-size:30px;">
+        	ZARAZA DESIGN
+        </h1>
+        <p style="font-size: 30px;">
+        personalized interior design services to help shape, refine & realize your own design vision
+        </p>
+        </div>
+
+            <div class="logo">
+            </div>
+                <div class="bottom_menubar">
+                    <ul class="lavalamp-full">
+                        <li class="current"><a href="#">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>    
+      
+</div>
+    
+<div id="preload">
+		<img src="Photos/Home Slideshow/slide-1.jpg" width="1" height="1" />
+        <img src="Photos/Home Slideshow/slide-2.jpg" width="1" height="1" />
+        <img src="Photos/Home Slideshow/slide-3.jpg" width="1" height="1" />
+        <img src="Photos/Home Slideshow/slide-4.jpg" width="1" height="1" />
+</div>
+
+</body>
+</html>

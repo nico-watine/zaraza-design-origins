@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/lavalamp_full.css" type="text/css" media="screen">
+    
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>    
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.js"></script>    
+<script type="text/javascript">
+$(function() {
+    $.easing.easeOutBack = function (x, t, b, c, d, s) {
+        if (s === undefined) s = 1.70158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    };
+
+    $('.lavalamp-full').lavalamp({
+        blur: function() {
+            $(this).addClass('blur');
+        },
+        focus: function() {
+            $(this).removeClass('blur');
+        },
+        animation: Modernizr.testAllProps('transition') ? 0 : {duration: 2000, easing: 'easeOutBack'}
+    });
+});
+</script>
+
+<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancyBox/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen" />
+    
+    <!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css" />
+	<script type="text/javascript" src="fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    
+    <style type="text/css">
+		#thumb:hover
+		{
+			opacity:.8;
+			filter:alpha(opacity=80); /* For IE8 and earlier */
+		}
+		
+		.fancybox-nav span {
+				visibility:visible;
+		}		
+    </style> 
+    
+    	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Zaraza Design | Gallery</title>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "d32f9e85-41b9-4d78-8386-9361fbce08f8", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+<script>
+// other links of reference
+// http://forums.sharethis.com/topic.php?id=3279
+// http://forums.sharethis.com/topic.php?id=78490
+// http://support.sharethis.com/customer/portal/articles/475079-share-properties-and-sharing-custom-information
+
+function buildShareThis(url){
+ var customShareThis  = "<div class='share'>"; // class for styling maybe
+     customShareThis += "<span class='st_facebook_hcount' displayText='Facebook' st_url='"+url+"'></span> ";
+     customShareThis += "<span class='st_twitter_hcount' displayText='Tweet' st_url='"+url+"'></span>";
+     customShareThis += "<span class='st_pinterest_hcount' displayText='Pinterest' st_url='"+url+"' st_img='"+url+"' ></span>";
+     customShareThis += "</div>";
+     return customShareThis;
+}
+
+$(document).ready(function() {
+ $(".fancybox").fancybox({
+   closeClick  : false,
+   nextEffect: 'fade',
+   prevEffect: 'fade',
+   beforeShow: function() {
+     var caption =  $(this.element).data("caption") ? $(this.element).data("caption") : "";
+     this.title = this.title ? this.title + buildShareThis(this.href) + caption : buildShareThis(this.href) + caption;
+  },
+  afterShow: function(){
+     stButtons.locateElements();
+  },
+  helpers : {
+    overlay: {closeClick: false},
+    title: {type: 'inside'}
+  }
+ }); // fancybox
+}); // ready
+</script>
+</head>
+
+<body>
+    <div class="main_skeleton_gallery">
+    
+    	<div class="home_background">
+        	
+        </div>
+            <div class="logo">
+            </div>
+                <div class="bottom_menubar">
+                    <ul class="lavalamp-full">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="#">Gallery</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>   
+      
+      
+      <a class="fancybox"  data-caption="patios" data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Gallery/gallery_16.jpg" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_16t.jpg" id="thumb" style="height: 220px; width: 220px;border: none;"/></a>
+      <a class="fancybox"   title=" bedrooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_2.jpg" data-fancybox-group="gallery"/><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_2t.jpg" id="thumb" style="position:absolute; top: 220px; left: 0px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+	  <a class="fancybox"   title=" living rooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_3.jpg" data-fancybox-group="gallery"  /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_3t.jpg" id="thumb" style="position:absolute; top: 440px; left: 0px; z-index: 10; height: 220px; width: 220px;border: none;"/></a> 
+           
+	  <a class="fancybox"   title=" living rooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_13.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_13t.jpg" id="thumb" style="position:absolute; top: 0px; left: 220px; z-index: 10; height: 220px; width: 220px;border: none;" /></a>
+       <a class="fancybox"   title=" bedrooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_1.jpg" data-fancybox-group="gallery"  /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_1t.jpg" id="thumb" style="position:absolute; top: 220px; left: 220px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+       <a class="fancybox"   title=" kitchens"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_15.JPG" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_15t.jpg" id="thumb" style="position:absolute; top: 440px; left: 220px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>     
+	   
+       <a class="fancybox"   title=" game rooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_7.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_7t.jpg" id="thumb" style="position:absolute; top: 0px; left: 440px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+        <a class="fancybox"   title=" childrens' rooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_14.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_14t.jpg" id="thumb" style="position:absolute; top: 220px; left: 440px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+        <a class="fancybox"   title=" dining rooms"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_9.jpg" data-fancybox-group="gallery"  /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_9t.jpg" id="thumb" style="position:absolute; top: 440px; left: 440px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+		
+        <a class="fancybox"   title=" family dens"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_10.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_10t.jpg" id="thumb" style="position:absolute; top: 0px; left: 660px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+        <a class="fancybox"   title=" kitchen backsplashes"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_11.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_11t.jpg" id="thumb" style="position:absolute; top: 220px; left: 660px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+        <a class="fancybox"   title=" sitting areas"rel="group" href="http://www.zarazadesign.com/Photos/Gallery/gallery_17.jpg" data-fancybox-group="gallery" /><img src="http://www.zarazadesign.com/Photos/Gallery%20Thumbs/gallery_17t.jpg" id="thumb" style="position:absolute; top: 440px; left: 660px; z-index: 10; height: 220px; width: 220px;border: none;"/></a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/lavalamp_full.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+<!-- lavaLamp full action script -->
+<script type="text/javascript">
+$(function() {
+    $.easing.easeOutBack = function (x, t, b, c, d, s) {
+        if (s === undefined) s = 1.70158;
+        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    };
+
+    $('.lavalamp-full').lavalamp({
+        blur: function() {
+            $(this).addClass('blur');
+        },
+        focus: function() {
+            $(this).removeClass('blur');
+        },
+        animation: Modernizr.testAllProps('transition') ? 0 : {duration: 2000, easing: 'easeOutBack'}
+    });
+});
+</script>
+<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancyBox/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/jquery.fancybox.css" media="screen" />
+    
+    <!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css" />
+	<script type="text/javascript" src="fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    
+<style type="text/css">
+		
+		.fancybox-nav span {
+				visibility:visible;
+		}		
+    </style> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Zaraza Design | Services</title>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "d32f9e85-41b9-4d78-8386-9361fbce08f8", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+<script>
+// other links of reference
+// http://forums.sharethis.com/topic.php?id=3279
+// http://forums.sharethis.com/topic.php?id=78490
+// http://support.sharethis.com/customer/portal/articles/475079-share-properties-and-sharing-custom-information
+
+function buildShareThis(url){
+ var customShareThis  = "<div class='share'>"; // class for styling maybe
+     customShareThis += "<span class='st_facebook_hcount' displayText='Facebook' st_url='"+url+"'></span> ";
+     customShareThis += "<span class='st_twitter_hcount' displayText='Tweet' st_url='"+url+"'></span>";
+     customShareThis += "<span class='st_pinterest_hcount' displayText='Pinterest' st_url='"+url+"' st_img='"+url+"' ></span>";
+     customShareThis += "</div>";
+     return customShareThis;
+}
+
+$(document).ready(function() {
+ $(".fancybox").fancybox({
+   closeClick  : false,
+   nextEffect: 'fade',
+   prevEffect: 'fade',
+   beforeShow: function() {
+     var caption =  $(this.element).data("caption") ? $(this.element).data("caption") : "";
+     this.title = this.title ? this.title + buildShareThis(this.href) + caption : buildShareThis(this.href) + caption;
+  },
+  afterShow: function(){
+     stButtons.locateElements();
+  },
+  helpers : {
+    overlay: {closeClick: false},
+    title: {type: 'inside'}
+  }
+ }); // fancybox
+}); // ready
+</script>
+</head>
+
+<body>
+    <div class="main_skeleton">
+    
+    	<div class="home_background">
+        <img src="Images/background-home.jpg" />
+            <div class="logo">
+            </div>
+                <div class="bottom_menubar">
+                    <ul class="lavalamp-full">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="current"><a href="#">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>    
+     
+      <div class="services_header">
+      <h1 style="font-size:90px; font-weight:normal;">
+      services
+      </h1>
+      </div>
+      <div class="services_content-1">
+        <p style="background-color: white; padding: 10px;">
+      Zaraza Design provides a variety of interior design services for its residential and commercial design clients.<br /><br />Working through a collaborative process with its clients, Zaraza Design provides personalized services to guide clients through each step of the interior design process.<br /><br />This design process includes :<br />
+•	Initial style and design consultation.<br />
+•	Selection of finishes, fabrics and furnishings.<br />
+•	Remodeling and layout consultation.<br />
+•	Project Management.<br />
+•	Installation.<br /><br />
+Throughout the interior design process, Zaraza Design works closely with its clients to assist them in refining and realizing their interior design vision.
+</p>
+</div>
+<div class="thumb-1">
+<a class="fancybox" title=" A Design Consultation Rendering" data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Services/Rendering - 1.jpg"><img src="Photos/Services/Rendering - 1 - thumb.jpg" /></a>
+</div>
+<div class="thumb-2">
+<a class="fancybox" title=" A new layout schematic, including the space's new finishes, fabrics and furnishings" data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Services/Rendering - 2.jpg"><img src="Photos/Services/Rendering - 2 - thumb.jpg" /></a>
+</div>
+<div class="thumb-3">
+<a class="fancybox" title=" A rendering of a remodeled staircase" data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Services/Rendering - 3.jpg"><img src="Photos/Services/Rendering - 3 - thumb.jpg" /></a>
+</div>
+<div class="thumb-4">
+<a class="fancybox" title=" A schematic displaying a layout with its new finishes." data-fancybox-group="gallery" href="http://www.zarazadesign.com/Photos/Services/Rendering - 4.jpg"><img src="Photos/Services/Rendering - 4 - thumb.jpg" /></a>
+</div>
+
+</body>
+</html>
